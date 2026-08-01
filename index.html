@@ -3,6 +3,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>中国省级党政双正职履历数据库 · Province-Collect</title>
 <meta name="description" content="省级党政双正职履历数据库：省委书记与省长/自治区主席/直辖市市长（1978–2026）完整任期与履历，七路盲源联网采集、双盲拼接、逐条引文经程序校验为原文快照，每段可回溯。仅限学术研究。">
+<meta name="robots" content="noindex,nofollow,noarchive">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Province-Collect">
 <meta property="og:title" content="中国省级党政双正职履历数据库 · Province-Collect">
@@ -15,8 +16,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=21d58cce">
-</head><body>
+<link rel="stylesheet" href="css/style.css?v=2cac840d">
+</head><body class="site-locked">
+<section class="site-lock" id="site-lock" aria-labelledby="site-lock-title">
+  <div class="site-lock-card">
+    <span class="site-lock-seal" aria-hidden="true">省</span>
+    <p class="site-lock-kicker">PROVINCE-COLLECT · PRIVATE PREVIEW</p>
+    <h1 id="site-lock-title">访问受限</h1>
+    <p class="site-lock-intro">请输入访问密码后查看省级党政双正职履历数据库。</p>
+    <form id="site-lock-form" class="site-lock-form" novalidate>
+      <label for="site-password">访问密码</label>
+      <div class="site-lock-input-row">
+        <input id="site-password" name="password" type="password" inputmode="numeric"
+          autocomplete="current-password" maxlength="32" aria-describedby="site-lock-error" required autofocus>
+        <button class="btn btn-primary" id="site-lock-submit" type="submit">进入网站</button>
+      </div>
+      <p class="site-lock-error" id="site-lock-error" role="alert" aria-live="polite"></p>
+    </form>
+    <p class="site-lock-note">仅限授权访问 · 本标签页会话内保持登录</p>
+  </div>
+</section>
 <a class="skip-link" href="#app">跳到主要内容</a>
 
 <header class="topbar">
@@ -143,6 +162,5 @@
   </div>
 </div>
 
-<script src="js/data_core.js?v=157c6ad6"></script>
-<script src="js/app.js?v=efe0887a"></script>
+<script src="js/gate.js?v=f519e1dc" data-core-src="js/data_core.js?v=157c6ad6" data-app-src="js/app.js?v=efe0887a"></script>
 </body></html>
