@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>中国省级党政双正职履历数据库 · Province-Collect</title>
+<meta name="description" content="省级党政双正职履历数据库：省委书记与省长/自治区主席/直辖市市长（1978–2026）完整任期与履历，七路盲源联网采集、双盲拼接、逐条引文经程序校验为原文快照，每段可回溯。仅限学术研究。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Province-Collect">
+<meta property="og:title" content="中国省级党政双正职履历数据库 · Province-Collect">
+<meta property="og:description" content="省委书记与省长/自治区主席/直辖市市长 1978–2026 完整任期与履历，七路盲源、逐条可回溯。仅限学术研究。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中国省级党政双正职履历数据库">
+<meta name="twitter:description" content="七路盲源·双盲拼接·逐条可回溯的省级主官履历库。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23b23a2a'/%3E%3Ctext x='16' y='23' font-family='serif' font-weight='900' font-size='20' fill='%23fdf8ee' text-anchor='middle'%3E省%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=21d58cce">
+</head><body>
+<a class="skip-link" href="#app">跳到主要内容</a>
+
+<header class="topbar">
+  <a class="brand" href="#/home"><span class="brand-seal" aria-hidden="true">省</span>
+    <span class="brand-text"><strong>省级党政双正职履历数据库</strong>
+      <small>PROVINCE-LEVEL DUAL LEADERSHIP CAREERS 1978–2026</small></span></a>
+  <nav class="topnav" aria-label="主导航">
+    <a href="#/home" data-nav="home" class="is-active">首页</a>
+    <a href="#/provinces" data-nav="provinces">省览</a>
+    <a href="#/persons" data-nav="persons">人物</a></nav>
+  <div class="topbar-meta"><span class="chip chip-version" id="ver">—</span></div>
+</header>
+
+<main id="app" tabindex="-1">
+<noscript><div class="noscript-fallback container"><h1>中国省级党政双正职履历数据库 · Province-Collect</h1><p>本站为纯前端单页应用，需启用 JavaScript 浏览交互式热力图、省览与人物履历。收录 1978–2026 年省级党政双正职完整任期与履历，七路盲源联网采集、逐条可回溯。仅限学术研究使用。</p></div></noscript>
+
+<!-- ============ 首页 ============ -->
+<section class="view is-active" id="view-home" aria-label="首页">
+  <div class="container hero">
+    <div class="hero-main">
+      <p class="kicker">7 路盲源 · 双盲拼接 · 逐条可回溯 · 仅限学术研究</p>
+      <h1>从 1978 到 2026，<br><em>省级主官的来路</em>。</h1>
+      <p class="lede">省委书记、省长/自治区主席/直辖市市长——两位最高主官的完整任期与履历：政府公报 + 省人大 + 新华社 + 领导资料库 + 百科·方志 + 既有手工名册七路盲采，多源互证，每条引文经程序校验为原文快照子串。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#/provinces">浏览各省</a>
+        <a class="btn btn-ghost" href="#/persons">查看人物</a></div>
+    </div>
+    <aside class="hero-side" aria-label="数据规模"><dl class="stat-ledger">
+      <div class="ledger-row"><dt>收录省份</dt><dd id="stat-provs">—</dd></div>
+      <div class="ledger-row"><dt>人物</dt><dd id="stat-persons">—</dd></div>
+      <div class="ledger-row"><dt>任职段</dt><dd id="stat-spells">—</dd></div>
+      <div class="ledger-row"><dt>证据</dt><dd id="stat-ev">—</dd></div>
+      <div class="ledger-row"><dt>时间跨度</dt><dd id="stat-span">—</dd></div>
+    </dl></aside>
+  </div>
+
+  <div class="container section">
+    <div class="section-head"><span class="sec-no" aria-hidden="true">01</span><h2>覆盖热力图</h2><span class="sec-rule"></span></div>
+    <p class="section-note">每省 · 每年 · 双岗（■书记 ■行政正职）填充态。空白 = 显式缺口，斜纹 = 尚未建制，双色 = 两岗皆填。点省名进入该省详情。</p>
+    <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div>
+      <div class="heatmap-legend"><span>缺</span><span class="hm-scale" aria-hidden="true"></span><span>双岗填满</span>
+        <span class="sw sw-sec" aria-hidden="true"></span>仅书记 <span class="sw sw-gov" aria-hidden="true"></span>仅行政正职
+        <span class="sw sw-na" aria-hidden="true"></span>尚未建制</div></div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head"><span class="sec-no" aria-hidden="true">02</span><h2>证据池质量</h2><span class="sec-rule"></span></div>
+    <p class="section-note" style="margin-bottom:1rem">每一条结论挂逐字引文 + 源 URL，经 verify_quotes.py 程序校验为 archive 快照子串。下图为证据按可信度分级的真实计数。</p>
+    <div id="tier-chart" style="margin-bottom:2rem"></div>
+    <div class="features">
+      <article class="feature"><span class="feature-no" aria-hidden="true">甲</span><h3>A 级 · 官方原始</h3><p>省政府公报、省人大任免决定、新华社受权发布、中纪委通报原文及 Wayback 存档。单源即可支撑结论。</p></article>
+      <article class="feature"><span class="feature-no" aria-hidden="true">乙</span><h3>B 级 · 权威二手</h3><p>人民网·新华网·人民网领导资料库·省委机关报。单源可支撑。</p></article>
+      <article class="feature"><span class="feature-no" aria-hidden="true">丙</span><h3>C 级 · 聚合互证</h3><p>百度/360/搜狗百科、维基、既有手工名册(seed)。须 ≥2 独立机构来源互证才入结论。</p></article>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head"><span class="sec-no" aria-hidden="true">03</span><h2>方法</h2><span class="sec-rule"></span></div>
+    <div class="features">
+      <article class="feature"><span class="feature-no" aria-hidden="true">甲</span><h3>7 路盲源并扫</h3><p>政府工作报告 · 省人大 · 省政府官网+Wayback · 中央任免 · 党报 · 领导资料库+百科 · 既有名册(seed)。七路互为盲源、独立检索。</p></article>
+      <article class="feature"><span class="feature-no" aria-hidden="true">乙</span><h3>双盲拼接 + 确定性比对</h3><p>同一证据池交正序/倒序两代理独立拼接，diffSpells 确定性比对（LCS 人名对齐）、同期唯一校验。</p></article>
+      <article class="feature"><span class="feature-no" aria-hidden="true">丙</span><h3>引文程序校验 + 种子互证</h3><p>每篇引文经 verify_quotes.py 校验为 archive 快照子串。既有手工名册作可信度种子源、须 A/B 联网源证实。</p></article>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="section-head"><span class="sec-no" aria-hidden="true">04</span><h2>引用本数据库</h2><span class="sec-rule"></span></div>
+    <div class="cite-box">
+      <code id="cite-text">Province-Collect 项目组 (2026). 中国省级党政双正职履历数据库 [数据集]. 仅限学术研究使用 · 每条结论字段级可溯源</code>
+      <button class="btn btn-ghost" onclick="copyCite()">复制引用</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 省览 ============ -->
+<section class="view" id="view-provinces" aria-label="省览">
+  <div class="container section"><h2 class="page-title">省览</h2>
+    <p class="sec-note">已采集省份，点卡片进入该省双轨时间轴与人物档案。</p>
+    <div class="prov-cards" id="prov-cards"></div>
+  </div>
+</section>
+
+<!-- ============ 省详情 ============ -->
+<section class="view" id="view-province" aria-label="省详情">
+  <div class="container section" id="province-panel"></div>
+</section>
+
+<!-- ============ 人物列表 ============ -->
+<section class="view" id="view-persons" aria-label="人物">
+  <div class="container section"><h2 class="page-title">人物</h2>
+    <div class="filter-bar">
+      <select id="f-prov" aria-label="按省份筛选"><option value="">全部省份</option></select>
+      <select id="f-decade" aria-label="按出生年代筛选"><option value="">全部出生年代</option><option>192</option><option>193</option><option>194</option><option>195</option><option>196</option></select>
+      <input id="f-search2" type="search" aria-label="搜索姓名、籍贯或学历" placeholder="搜索姓名 / 籍贯 / 学历…">
+      <span class="chip" id="persons-count" role="status" aria-live="polite">—</span>
+    </div>
+    <div id="person-list"></div>
+  </div>
+</section>
+
+<!-- ============ 人物详情 ============ -->
+<section class="view" id="view-person" aria-label="人物档案">
+  <div class="container section" id="person-panel"></div>
+</section>
+
+</main>
+
+<footer class="site-foot"><div class="container">
+  <p>中国省级党政双正职履历数据库 · Province-Collect <span id="foot-ver">v0.4.0</span> · 数据来自多源公开信息联网采集，每段可溯源 · 仅限学术研究使用</p>
+</div></footer>
+
+<div class="tooltip" id="tooltip" hidden></div>
+
+<!-- 报错弹窗 -->
+<div class="modal-overlay" id="modal-report" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h3 id="modal-title">报告数据错误</h3>
+    <p class="modal-sub">复制下方模板，前往项目仓库以 Issue 形式提交（可编辑）：</p>
+    <textarea id="report-body" rows="9" spellcheck="false"></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeReport()">取消</button>
+      <button class="btn" onclick="copyReport()">复制模板</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data_core.js?v=157c6ad6"></script>
+<script src="js/app.js?v=efe0887a"></script>
+</body></html>
