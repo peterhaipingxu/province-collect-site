@@ -436,7 +436,15 @@ function renderPersonSync(pid, p) {
     // L2 annotation badges
     let l2Badges = '';
     const tags = [];
-    if (c.rk && c.rk !== '无') tags.push(`<span class="tag-l2 tag-rank" title="该条行政级别">${esc(c.rk)}</span>`);
+    const finalRank = c.fr && !['无', '无级别'].includes(c.fr) ? c.fr : '';
+    const positionRank = c.rk && !['无', '无级别'].includes(c.rk) ? c.rk : '';
+    const visibleRank = finalRank || positionRank;
+    if (visibleRank) {
+      const rankTitle = finalRank && positionRank && finalRank !== positionRank
+        ? `最终行政级别（段末累计）；该条职务级别：${positionRank}`
+        : (finalRank ? '最终行政级别（段末累计）' : '该条行政级别');
+      tags.push(`<span class="tag-l2 tag-rank" title="${esc(rankTitle)}">${esc(visibleRank)}</span>`);
+    }
     if (c.pf) tags.push(`<span class="tag-l2 tag-flag" title="标志位">${esc(c.pf)}</span>`);
     if (c.ol) tags.push(`<span class="tag-l2 tag-orglbl" title="组织标签">${esc(c.ol)}</span>`);
     if (c.cl) tags.push(`<span class="tag-l2 tag-cl" title="中央/地方">${esc(c.cl)}</span>`);
